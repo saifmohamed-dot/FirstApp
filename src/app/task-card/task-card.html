@@ -1,0 +1,10 @@
+<div class="crd">
+    <h2> {{Task.Title}} </h2>
+    <p> {{Task.Describtion}} </p>
+    <hr>
+    <div class="actionsBtns">
+        <button (click)="doneTask()" class="btn btn-outline-success">Done</button>
+        <button (click)="upateTask()" class="btn btn-outline-primary">Update</button>
+        <button (click)="deleteTask()" class="btn btn-outline-danger">Delete</button>
+    </div>
+</div>

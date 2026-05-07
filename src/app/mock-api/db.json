@@ -1,0 +1,61 @@
+{
+  "Users": [
+    {
+      "Email": "saifelmajic531@gmail.com",
+      "Username": "guest",
+      "Password": "saif12",
+      "id": "NTVrd4KGU6c"
+    },
+    {
+      "Email": "saif@gmail",
+      "Username": "admin",
+      "Password": "ahmed123",
+      "id": "A3Q9EWo0j84"
+    },
+    {
+      "Email": "redirect@gmail.com",
+      "Username": "Redirect ",
+      "Password": "admin12",
+      "id": "EPTsDvdvPGU"
+    }
+  ],
+  "Tasks": [
+    {
+      "Title": "saif is here",
+      "Describtion": "asfdadsf",
+      "Priority": "high",
+      "DueDate": "",
+      "Category": "work",
+      "State": 2,
+      "id": "474bwh8sLS0"
+    },
+    {
+      "Title": "new task ",
+      "Describtion": "asdfasd , from the ui",
+      "Priority": "med",
+      "DueDate": "2026-05-06",
+      "Category": "personal",
+      "State": 3,
+      "id": "st7XxTE-vEI"
+    },
+    {
+      "Title": "test for post ",
+      "Describtion": "post request test \nput request after testing ....",
+      "Priority": "high",
+      "DueDate": "2026-04-26",
+      "Category": "personal",
+      "State": 2,
+      "id": "wpeDsx9xCAU"
+    },
+    {
+      "id": "xmABKSgMTp8",
+      "Title": "Done ",
+      "Describtion": "Test Put For Done .",
+      "Priority": "med",
+      "DueDate": "2026-05-20",
+      "Category": "study",
+      "State": 1
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

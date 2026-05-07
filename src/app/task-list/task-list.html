@@ -1,0 +1,59 @@
+<div class="tasks-container">
+    <div class="tasks-container-actionBtn">
+        <button (click)="displayLeft()" class="left-tasks">Left</button>
+        <button (click)="displayDone()" class="done-tasks">Done</button>
+        <button (click)="displayUpdated()" class="updated-tasks">Updated</button>
+        <button (click)="displayDeleted()" class="deleted-tasks">Deleted</button>
+    </div><hr>
+    <div class="modal">
+
+    </div>
+    <div class="row row-gap-2">
+        <div class="h2">
+            {{ currentLabel }}
+        </div>
+        @for (item of Tasks; track item.id) {
+            @if(item.State == StateDisplayed) {
+                <app-task-card (TaskUpdatedEmitter)="onTaskUpdated($event)" class="col-md-4 col-12" [Task]="item"></app-task-card>
+            }
+        }
+    </div>
+    <!-- Modal -->
+    @if(openFormUpdateTask) {
+        <div
+        class="modal fade show d-block"
+        tabindex="-1"
+        style="background: rgba(0,0,0,0.5);"
+        >
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content custom-modal">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Simple Modal</h5>
+
+                    <button
+                    type="button"
+                    class="btn-close"
+                    (click)="closeModal()"
+                    ></button>
+                </div>
+
+                <div class="modal-body">
+                    <app-task-form [UpdateTask]="this.updatingTask"></app-task-form>
+                </div>
+
+                <div class="modal-footer">
+                    <button
+                    class="btn btn-secondary"
+                    (click)="closeModal()"
+                    >
+                    Close
+                    </button>
+                </div>
+
+                </div>
+            </div>
+        </div>    
+    }
+
+</div>--

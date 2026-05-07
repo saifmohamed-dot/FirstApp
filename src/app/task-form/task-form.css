@@ -1,0 +1,22 @@
+.task-form-container {
+    border : 1px  solid lightslategrey;
+    padding : 20px;
+    text-align: center;
+    margin: 100px auto;
+    box-shadow: 2px 2px 5px #f0ecec;
+    border-radius: 10px;
+    width:500px;
+}
+textarea[name="description"] {
+    max-width: 100%;
+    min-width: 99%;
+    min-height: 100px;
+}
+.add-task-btn {
+    padding: 10px;
+}
+h1 {
+    color : white;
+    background-color: brown;
+    padding : 15px;
+}

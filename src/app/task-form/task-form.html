@@ -1,0 +1,30 @@
+
+<form class="task-form-container">
+  <h1> {{formTitle}} </h1>
+  <label>Task Title</label><br>
+  <input [(ngModel)]="Task.Title" type="text" name="taskTitle"><br><br>
+
+
+  <label>Description</label><br>
+  <textarea [(ngModel)]="Task.Describtion" name="description"></textarea><br><br>
+
+  <label>Priority</label><br>
+  <select [(ngModel)]="Task.Priority" name="priority">
+    <option value="low">Low</option>
+    <option value="med">Medium</option>
+    <option value="high">High</option>
+  </select><br><br>
+
+  <label>Due Date</label><br>
+  <input [(ngModel)]="Task.DueDate" type="date" name="dueDate"><br><br>
+
+  <label>Category</label><br>
+  <select [(ngModel)]="Task.Category" name="category">
+    <option value="work">Work</option>
+    <option value="personal">Personal</option>
+    <option value="study">Study</option>
+  </select><br><br>
+
+  <button (click)="onAddTask()" type="submit" class="add-task-btn">{{formTitle}}</button>
+
+</form>

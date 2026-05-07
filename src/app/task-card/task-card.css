@@ -1,0 +1,23 @@
+.crd {
+    border : 1px solid lightgray;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgb(255 251 251);
+}
+.actionsBtns {
+    display: flex;
+    align-items: center;
+    gap: 2%;
+}
+.actionsBtns button {
+    width: 100%;
+}
+/* .task-btn-update {
+    background-color: #669bbc;
+}
+.task-btn-delete {
+    background-color: red;
+}
+.task-btn-done {
+    background-color: green;
+} */

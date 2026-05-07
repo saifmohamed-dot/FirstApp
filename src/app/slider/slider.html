@@ -1,0 +1,15 @@
+<div class="coursal">
+    <div class="slider-container">
+        <img (click)="moveLeft()" src="left.png" class="arrow">
+        <img [src]="currentImg()">
+        <img (click)="moveRight()" src="right.png" class="arrow">
+    </div>
+    <div class="dots-container">
+        @for (item of [0,1,2]; track item) {
+            <div (click)="onDotClick($event)" [class.dot-active]="currentImgIdx() === item" class="dots" id="{{item}}"></div>
+        }
+
+    </div>
+    <button (click)="onStartTicking()"> Start </button>
+</div>
+

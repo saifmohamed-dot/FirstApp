@@ -1,0 +1,37 @@
+<div class="sign-in">
+    <h3> SignIn </h3>
+    <form #SignInForm = ngForm (submit)="login(SignInForm)">
+        <div>
+            <label for="email">Email</label><br>
+            <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            required
+            placeholder="Enter your email"
+            ngModel>
+        </div>
+        @if(SignInForm.form.get('email')?.touched && SignInForm.form.get('email')?.invalid) {
+            <span class="text-danger">email not valid</span>
+        } 
+        <br>
+        <div>
+            <label for="password">Password</label><br>
+            <input 
+            type="password" 
+            id="password" 
+            name="password"
+            required
+            minlength="5"
+            pattern="^(?=.*[A-Za-z])(?=.*\d).+$"
+            placeholder="Enter your password"
+            title="Must contain at least one letter and one number"
+            ngModel>
+        </div>
+        @if(SignInForm.form.get('password')?.touched && SignInForm.form.get('password')?.invalid) {
+            <span class="text-danger">password not valid</span>
+        } 
+        <br>
+        <button [class.submit-button-disable]="SignInForm.invalid" [disabled]="SignInForm.invalid" type="submit">Login</button>
+    </form>
+</div>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Signup</title>
+</head>
+<body>
+
+    <div class="sign-up">
+        <h2>Registration</h2>
+        <form [formGroup]="signUpForm">
+
+            <label for="username">Username</label><br>
+            <input 
+            type="text" 
+            id="username" 
+            name="username" 
+            formControlName="username">
+            <br>
+            @if(signUpForm.get('username')?.touched && signUpForm.get('username')?.valid) {
+                <span class="text-success"> good username </span>
+            }
+            @else if (signUpForm.get('username')?.touched) {
+                <span class="text-danger"> {{getFieldError('username')}} </span>
+            }
+            <br>
+            <label for="email">Email</label><br>
+            <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            formControlName="email">
+            <br>
+            @if(signUpForm.get('email')?.touched && signUpForm.get('email')?.valid) {
+                <span class="text-success"> good email </span>
+            }
+            @else if (signUpForm.get('email')?.touched) {
+                <span class="text-danger"> {{getFieldError('email')}} </span>
+            }
+            <br>
+
+            <label for="password">Password</label><br>
+            <input 
+            type="password" 
+            id="password" 
+            name="password" 
+            formControlName="password">
+            <br>
+            @if(signUpForm.get('password')?.touched && signUpForm.get('password')?.valid) {
+                <span class="text-success"> strong password </span>
+            }
+            @else if (signUpForm.get('password')?.touched) {
+                <span class="text-danger"> {{getFieldError('password')}} </span>
+            }
+            <br>
+
+            <label for="confirmPassword">Confirm Password</label><br>
+            <input 
+            type="password" 
+            id="confirmPassword" 
+            name="confirmPassword" 
+            formControlName="passwordConfirmation">
+            <br>
+            @if(signUpForm.get('passwordConfirmation')?.touched && signUpForm.errors == null) {
+                <span class="text-success"> strong password </span>
+            }
+            @else if (signUpForm.get('passwordConfirmation')?.touched) {
+                <span class="text-danger"> invalid  password confirmation </span>
+            }
+            <br>
+            <button [class.submit-button-disable]="signUpForm.invalid" [disabled]="signUpForm.invalid" (click)="register()" type="submit">Submit</button>
+        </form>
+    </div>
+
+
+</body>
+</html>

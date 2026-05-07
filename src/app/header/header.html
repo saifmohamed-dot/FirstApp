@@ -1,0 +1,18 @@
+<div class="lnks-container">
+    <div class="lnks-left-container">
+        <a [routerLink]="['/home']">Home</a>
+        <a [routerLink]="['/contact']">Contact</a>
+        <a [routerLink]="['/about']">About</a>
+        <a [routerLink]="['/task/mytasks']"> My Tasks </a>
+        <a [routerLink]="['/task/addtask']"> Add Task</a>
+    </div>
+    <div class="lnks-right-container">
+        @if (auth.isLogged()) {
+            <div (click)="auth.Logout()" class="btn btn-secondary"> Logout </div>
+        }
+        @else {
+             <a class="btn btn-outline-primary" [routerLink]="['/auth/signin']"> Login </a>
+            <a class="btn btn-outline-success" [routerLink]="['/auth/signup']"> Register </a>
+        }
+    </div>
+</div>
